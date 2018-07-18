@@ -4,10 +4,12 @@ import {routes} from './router/main'
 import App from './App.vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
-import './firebase';
-import VueFire from 'vuefire';
+import VueFirestore from 'vue-firestore';
 
-Vue.use(VueFire);
+// turns off the 'You are running Vue in development mode.' msg
+Vue.config.productionTip = false;
+
+Vue.use(VueFirestore);
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 

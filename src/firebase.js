@@ -1,5 +1,7 @@
-import Firebase from 'firebase'
-const firebaseApp = Firebase.initializeApp({
+import { firebase } from "@firebase/app";
+import "@firebase/firestore";
+
+const firebaseApp = firebase.initializeApp({
   // Populate your firebase configuration data here.
   apiKey: "AIzaSyCi7fPMnzlf40u0lrkho0jBlZSTdwm54_E",
   authDomain: "meteorologyapp.firebaseapp.com",
@@ -9,6 +11,4 @@ const firebaseApp = Firebase.initializeApp({
   messagingSenderId: "589485436047"
 });
 
-// Export the database for components to use.
-// If you want to get fancy, use mixins or provide / inject to avoid redundant imports.
 export const db = firebaseApp.firestore();
