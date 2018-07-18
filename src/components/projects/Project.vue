@@ -62,6 +62,7 @@ const  config = {
     methods:{
       getTasks : (id)=> {
         router.push({ path: '/task/'+id})
+        
         //router.push({ name: 'user', params: { userId }})
       }
     }
